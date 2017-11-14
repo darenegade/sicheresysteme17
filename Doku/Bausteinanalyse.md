@@ -1,5 +1,7 @@
 # Bausteinanalyse
 
+Basis ist muss und Standard kann mit Argumentation - Erhöht ist ausgeschlossen
+
 ## App: Anwendungen
 
 ### App3.1 Webanwendungen

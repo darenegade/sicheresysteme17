@@ -18,7 +18,7 @@
   <build>
     <resources>
       <resource>
-        <directory>dist</directory>
+        <directory>ui-src</directory>
       </resource>
     </resources>
     <plugins>
@@ -27,7 +27,7 @@
         <artifactId>frontend-maven-plugin</artifactId>
         <version>1.6</version>
         <configuration>
-          <nodeVersion>v8.9.0</nodeVersion>
+          <nodeVersion>v8.9.1</nodeVersion>
           <yarnVersion>v1.3.2</yarnVersion>
         </configuration>
         <executions>
@@ -73,11 +73,28 @@
             </goals>
             <phase>test</phase>
             <configuration>
-              <arguments>test --watch false</arguments>
+              <arguments>test</arguments>
               <failOnError>true</failOnError>
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <failOnError>false</failOnError>
+          <filesets>
+            <fileset>
+              <directory>.</directory>
+              <includes>
+                <include>dist/**/*.*</include>
+              </includes>
+              <followSymlinks>false</followSymlinks>
+            </fileset>
+          </filesets>
+        </configuration>
       </plugin>
     </plugins>
   </build>

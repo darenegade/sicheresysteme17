@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /node
+/ui-src
 
 # dependencies
 /node_modules

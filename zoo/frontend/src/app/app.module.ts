@@ -13,6 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import {MatListModule} from '@angular/material/list';
 import {AnimalService} from "./services/animal.service";
+import {MatCardModule} from "@angular/material";
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {AnimalService} from "./services/animal.service";
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [
     AnimalService,

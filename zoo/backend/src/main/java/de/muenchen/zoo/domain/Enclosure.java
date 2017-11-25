@@ -8,7 +8,10 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -28,7 +31,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Table(name = "Enclosure")
 public class Enclosure extends BaseEntity {
+
+    @NonNull
+    @NotNull
+    String name;
 
     @NonNull
     @NotNull
@@ -38,5 +46,9 @@ public class Enclosure extends BaseEntity {
     int size;
 
     @OneToMany
+    @JoinTable(
+        name = "Enclosure_Animals",
+        joinColumns = { @JoinColumn(name = "enclosure_id")},
+        inverseJoinColumns = {@JoinColumn(name="animal_id")})
     List<Animal> animals;
 }

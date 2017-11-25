@@ -8,7 +8,10 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -27,11 +30,16 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Table(name = "Keeper")
 public class Keeper extends BaseEntity {
     @NonNull
     @NotNull
     String name;
 
     @ManyToMany
+    @JoinTable(
+        name = "Keeper_Enclosures",
+        joinColumns = {@JoinColumn(name = "keeper_id")},
+        inverseJoinColumns = {@JoinColumn(name = "enclosure_id")})
     List<Enclosure> enclosures;
 }

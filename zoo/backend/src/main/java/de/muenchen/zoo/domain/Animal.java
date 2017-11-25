@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -26,6 +27,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Table(name = "Animal")
 public class Animal extends BaseEntity {
     @NonNull
     @NotNull

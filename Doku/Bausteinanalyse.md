@@ -29,6 +29,7 @@ Basis ist muss und Standard kann mit Argumentation - Erhöht ist ausgeschlossen
 ### App3.2 Webserver
 
 ### App4.3 Relationale DB
+- https://www.slideshare.net/ottokekalainen/less-passwords-more-security-unix-socket-authentication-and-other-mariadb-hardening-tips
 
 ## Sys: IT-Systeme
 

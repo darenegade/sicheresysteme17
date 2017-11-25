@@ -1,4 +1,4 @@
-package de.muenchen.zoo.zoo.domain;
+package de.muenchen.zoo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,9 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 /**
  * Organization: HM FK07.
@@ -27,11 +26,15 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Keeper extends BaseEntity {
+public class Animal extends BaseEntity {
     @NonNull
     @NotNull
     String name;
 
-    @ManyToMany
-    List<Enclosure> enclosures;
+    @NonNull
+    @NotNull
+    String type;
+
+    @Min(0)
+    double weight;
 }

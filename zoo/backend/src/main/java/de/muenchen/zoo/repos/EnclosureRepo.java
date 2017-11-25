@@ -1,6 +1,6 @@
-package de.muenchen.zoo.zoo.repos;
+package de.muenchen.zoo.repos;
 
-import de.muenchen.zoo.zoo.domain.Enclosure;
+import de.muenchen.zoo.domain.Enclosure;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

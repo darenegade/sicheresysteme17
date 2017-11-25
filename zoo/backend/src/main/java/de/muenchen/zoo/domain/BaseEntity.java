@@ -1,4 +1,4 @@
-package de.muenchen.zoo.zoo.domain;
+package de.muenchen.zoo.domain;
 
 import lombok.Data;
 

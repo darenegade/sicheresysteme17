@@ -1,4 +1,4 @@
-package de.muenchen.zoo.zoo;
+package de.muenchen.zoo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

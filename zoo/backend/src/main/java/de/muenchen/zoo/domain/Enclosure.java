@@ -1,4 +1,4 @@
-package de.muenchen.zoo.zoo.domain;
+package de.muenchen.zoo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,8 +8,10 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 /**
  * Organization: HM FK07.
@@ -26,15 +28,15 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Animal extends BaseEntity {
-    @NonNull
-    @NotNull
-    String name;
+public class Enclosure extends BaseEntity {
 
     @NonNull
     @NotNull
     String type;
 
     @Min(0)
-    int weight;
+    int size;
+
+    @OneToMany
+    List<Animal> animals;
 }

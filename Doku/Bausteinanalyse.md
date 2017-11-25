@@ -31,6 +31,11 @@ Basis ist muss und Standard kann mit Argumentation - Erhöht ist ausgeschlossen
 ### App4.3 Relationale DB
 - https://www.slideshare.net/ottokekalainen/less-passwords-more-security-unix-socket-authentication-and-other-mariadb-hardening-tips
 
+- nicht von außern erreichbar (nmap -A zeit nur port 22, 80)
+- nur erreichbar über localhost und unix-socket
+- root über socket auth d.h. kein passwort da direkt über linux auth system
+- nutzer mit grant auf Datenbank zoo  (db.user= zoo-keepr)
+
 ## Sys: IT-Systeme
 
 ### Sys1.1 Allgemeiner Server
@@ -39,21 +44,40 @@ Basis ist muss und Standard kann mit Argumentation - Erhöht ist ausgeschlossen
 
 #### SYS.1.1.A2 (B) Benutzerauthentisierung 
 
+- root nicht über ssh
+
 #### SYS.1.1.A3 (B) Restriktive Rechtevergabe
+
+- Jeder nutzer nur das was notwendig ist
 
 #### SYS.1.1.A4 (B) Rollentrennung
 
+- Sudo Nutzer (*benutzer* mit sudo und ssh)
+- System Nutzer für Applikation (*zoo-app*, unpriviligiert, kein home, keine shell)
+- System Nutzer für Applikation (*mysql*, unpriviligiert, kein home, keine shell)
+
 #### SYS.1.1.A5 (B) Schutz der Administrationsschnittstselle
+
+- Alle Einstellungen über *benutzer* ohne sudo
 
 #### SYS.1.1.A6 (B) Deaktivierung nicht benötigter Dienste und Kennungen 
 
+- Minimalsystem installiet ohen gui.
+- deinstallieren von packeten (bluetooth, email, ...)
+
 #### SYS.1.1.A7	(B) Updates und Patches für Firmware, Betriebssysteme und Anwendugen
+
+- ?
 
 #### SYS.1.1.A8 (B) Regelmäßige Datensicheurng {ausgeschlossen}
 
 #### SYS.1.1.A9 (B) Einsatz von Vieren-Schutzprogrammen
 
+- ?
+
 #### SYS.1.1.A10 (B) Protokollierung
+
+- ? 
 
 #### SYS.1.1.A11 (S) Festlegung einer Sicherheitsrichtlinie für Server {ausgeschlossen} 
 
@@ -103,25 +127,62 @@ Basis ist muss und Standard kann mit Argumentation - Erhöht ist ausgeschlossen
 
 #### SYS.1.3.A2 (B) Sorgältige Vergabe von IDs
 
+- standard von debian eingehalten
+- IDs sind eindeutig
+
 #### SYS.1.3.A3 (B) Automatisches Einbinden von Wechsellaufwerken
+
+- autofs nicht installiert
 
 #### SYS.1.3.A4 (B) Schutz von Anwendungen
 
+- ASLR aktiv [link](https://securityetalii.es/2013/02/03/how-effective-is-aslr-on-linux-systems/)
+'''
+sudo cat /proc/sys/kernel/randomize_va_space
+2 //  Full randomization. In addition to elements listed in the previous point, memory managed through brk() is also randomized
+'''
+
+- NX aktiv 
+'''
+sudo dmesg | grep "NX"
+[    0.000000] NX (Execute Disable) protection: active
+
+'''
+
 #### SYS.1.3.A5 (B) Sichere Installtion von Software-Packeten
+
+- nur stable debian ?
 
 #### SYS.1.3.A6 (S) Verwaltung von Beutzern und Gruppen
 
+- siehe oben
+
 #### SYS.1.3.A7 (S) Zusätzlihe Absicherung des Zugagns zum Single-User und Wiederherstellungsmodus
 
+- ?
+
 #### SYS.1.3.A8 (S) Verschlüsseler Zugriff über Secure Shell
+
+- nur über Zertifikate möglich
+- nicht für root möglich
 
 #### SYS.1.3.A9 (S) Abischerung des Bootvorgangs
 
 #### SYS.1.3.A10 (S) Verhinderung der Ausbreitug bei der Ausnutzung von Schwachstellen
 
+- Systemd Service (Starten von Software mit eigenen Nutzer (*zoo-app* und *mysql*)
+- Systemd ProtectSystem=full (prevent write /usr, /boot, /etc
+- Systemd ProtectHome=true (prevent access /home, /root /run/user
+
+- AppArmour
+
 #### SYS.1.3.A11 (S) Einsatz der Sicherheitsmechanismen von NFS
 
+- nicht installiert ?
+
 #### SYS.1.3.A12 (S) Einsatz der Sicherheitsmechnismen von NIS
+
+- nicht installiert ?
 
 #### SYS.1.3.A13 
 

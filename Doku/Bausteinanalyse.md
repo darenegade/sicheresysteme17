@@ -32,12 +32,12 @@ organisatorische sowie räumliche Gesichtspunkte ausklammern, da diese den Rahme
 
 * Schutzbedarfsfeststellung
   
-|ID | Bezeichnung             | Vertraulichkeit         | Integrität              | Verfügbarkeit   | Module
-|---|-------------------------|-------------------------|-------------------------|-----------------|
-| 1 | Linux Server mit Debian | (sehr hoch) (1)         | (sehr hoch) (2)         | (normal)        | Sys1.1/Sys1.3
-| 2 | openJDK 1.8             | normal                  | sehr hoch               | normal          | 
-| 3 | Maria DB                | normal                  | sehr hoch               | normal          |
-| 4 | Zoo App                 | normal                  | sehr hoch               | normal          |
+|ID | Bezeichnung             | Vertraulichkeit         | Integrität              | Verfügbarkeit   | Module         |
+|---|-------------------------|-------------------------|-------------------------|-----------------|----------------|
+| 1 | Linux Server mit Debian | (sehr hoch) (1)         | (sehr hoch) (2)         | (normal)        | Sys1.1/Sys1.3  |
+| 2 | openJDK 1.8             | normal                  | sehr hoch               | normal          |                |
+| 3 | Maria DB                | normal                  | sehr hoch               | normal          |                |
+| 4 | Zoo App                 | normal                  | sehr hoch               | normal          |                |
 
 
 (1a) - S. 117

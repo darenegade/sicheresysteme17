@@ -11,12 +11,37 @@ In die Schutzbedarfsfeststellung gehen unter anderern die Punkte festlegen der S
 hoch, sehr hoch), Feststellung des Schtuzbedarfes für Anwendungen, Geschäftsprozesse, Gebäude sowie 
 Kommunikationsverbindungen. Nicht alle Punkte müssen für jedes Element durchgeführt werden, auch werden wir 
 organisatorische sowie räumliche Gesichtspunkte ausklammern, da diese den Rahmen sprengen würden.
+ 
+* Festlegung des Geltungsbereichs für die Kern-Absicherung
 
-## Schutzbedarf Server
+** Zoo-Verwaltung 
 
-## Schutzbedarf Webanwendung
+* Identifikation und Festlegung der kritischen Aktiva (Kronjuwelen)
+  * Belegung von Gehegen draf nur von bestimmten personen durchgeführt werden. Welche
+   Tier wo sind darf aber jeder wissen.
+  * Daten dürfen nicht unwissentlich verändert werden
 
-## Schutzbedarf Datenbank
+* Strukturanalyse
+  * Webanwendung mit Datenhaltung
+  * Auf abgesichterem Server in einem Firmen Netz
+
+* Schutzbedarfsfeststellung
+  * Der Server befindet sich im Firmennetz und hat somit Zugriff auf
+   interne Funktionen und Server. Die Anwendung darf andere Elemente
+   Im Firmen Netz nicht stören. **Integrität - hoch**
+  * Eine Adminstration des Server darf nur von definierten Personal 
+   durchgeführt werden und nur aus dem Firmennetz und nicht über das Internet.
+  * Die Zuweisung von Tieren auf Gehege ist wichtig und darf nur
+   von definieten personen geändert werden **Integrität - hoch** 
+  * Jeder darf wissen wo welche Tiere sind**Vertraulichkeit - normal/niedrig**
+
+** Die Verwaltung der Gehege soll laufen kann aber ohne größeren aufwand auf 
+   ein anderern Server übertragen werden **Verfügbarkeit - normal**
+
+* Auswahl und Anpassung von Anforderungen
+* IT-Grundschutz-Check
+* Weiterführende Sicherheitsmaßnahmen
+
 
 # Bausteinanalyse
 

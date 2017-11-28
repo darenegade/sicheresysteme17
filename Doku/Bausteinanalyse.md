@@ -14,7 +14,7 @@ organisatorische sowie räumliche Gesichtspunkte ausklammern, da diese den Rahme
  
 * Festlegung des Geltungsbereichs für die Kern-Absicherung
 
-** Zoo-Verwaltung 
+** Zoo-Verwaltung Software / App
 
 * Identifikation und Festlegung der kritischen Aktiva (Kronjuwelen)
   * Belegung von Gehegen draf nur von bestimmten personen durchgeführt werden. Welche
@@ -22,21 +22,21 @@ organisatorische sowie räumliche Gesichtspunkte ausklammern, da diese den Rahme
   * Daten dürfen nicht unwissentlich verändert werden
 
 * Strukturanalyse
-  * Webanwendung mit Datenhaltung
-  * Auf abgesichterem Server in einem Firmen Netz
+
+|ID | Bezeichnung             | Beschreibung/ Kommentar             |
+|---|-------------------------|-------------------------------------|
+| 1 | Linux Server mit Debian | Headless, in einem interen Netzwerk.|
+| 2 | openJDK 1.8             | Als Runtime Umgebung für die Anwendung |
+| 3 | Maria DB                | Ablage der Daten der Zoo Anwendng   |
+| 4 | Spring / Agular JS      | Framework Backend / Frontend        |
+| 5 | Admin Kommunikation     | Admin Zugang für Server Wartung |
+| 6 | Verbindung nach aus     | Zugriff auf Anwendung über Proxy möglich |
 
 * Schutzbedarfsfeststellung
-  * Der Server befindet sich im Firmennetz und hat somit Zugriff auf
-   interne Funktionen und Server. Die Anwendung darf andere Elemente
-   Im Firmen Netz nicht stören. **Integrität - hoch**
-  * Eine Adminstration des Server darf nur von definierten Personal 
-   durchgeführt werden und nur aus dem Firmennetz und nicht über das Internet.
-  * Die Zuweisung von Tieren auf Gehege ist wichtig und darf nur
-   von definieten personen geändert werden **Integrität - hoch** 
-  * Jeder darf wissen wo welche Tiere sind**Vertraulichkeit - normal/niedrig**
+  
+  |---|----|
+  |ID |
 
-** Die Verwaltung der Gehege soll laufen kann aber ohne größeren aufwand auf 
-   ein anderern Server übertragen werden **Verfügbarkeit - normal**
 
 * Auswahl und Anpassung von Anforderungen
 * IT-Grundschutz-Check

@@ -28,17 +28,27 @@ organisatorische sowie räumliche Gesichtspunkte ausklammern, da diese den Rahme
 | 1 | Linux Server mit Debian | Headless, in einem interen Netzwerk.|
 | 2 | openJDK 1.8             | Als Runtime Umgebung für die Anwendung |
 | 3 | Maria DB                | Ablage der Daten der Zoo Anwendng   |
-| 4 | Spring / Agular JS      | Framework Backend / Frontend        |
-| 5 | Admin Kommunikation     | Admin Zugang für Server Wartung |
-| 6 | Verbindung nach aus     | Zugriff auf Anwendung über Proxy möglich |
+| 4 | Zoo App     | mit Framework Backend / Frontend        |
 
 * Schutzbedarfsfeststellung
   
-  |---|----|
-  |ID |
+|ID | Bezeichnung             | Vertraulichkeit         | Integrität              | Verfügbarkeit   | Module
+|---|-------------------------|-------------------------|-------------------------|-----------------|
+| 1 | Linux Server mit Debian | (sehr hoch) (1)         | (sehr hoch) (2)         | (normal)        | Sys1.1/Sys1.3
+| 2 | openJDK 1.8             | normal                  | sehr hoch               | normal          | 
+| 3 | Maria DB                | normal                  | sehr hoch               | normal          |
+| 4 | Zoo App                 | normal                  | sehr hoch               | normal          |
+
+
+(1a) - S. 117
+(1b) - Betriebssystem. Bild die Bais
+(1c) - Betriebssystem. Bild die Bais
 
 
 * Auswahl und Anpassung von Anforderungen
+
+
+
 * IT-Grundschutz-Check
 * Weiterführende Sicherheitsmaßnahmen
 

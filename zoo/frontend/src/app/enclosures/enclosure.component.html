@@ -4,9 +4,10 @@
     <mat-card-subtitle>{{ enclosure.type }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p>
-      Size: {{enclosure.size}}
-    </p>
+      <mat-icon *ngFor="let o of count(enclosure.size); let i = index">
+        <div style="color: #22cc33" *ngIf="i >= vacancy; else elseBlock">home</div>
+        <ng-template #elseBlock><div style="color: #e91e63">home</div></ng-template>
+      </mat-icon>
   </mat-card-content>
   <mat-card-actions>
   </mat-card-actions>

@@ -11,8 +11,8 @@ import 'rxjs/Rx';
 export abstract class CRUDService<T extends Base, F> {
 
   constructor(
-    private baseUrl: string,
-    private http: HttpClient,
+    protected baseUrl: string,
+    protected http: HttpClient,
     protected messageService: MessageService
   ) {
 

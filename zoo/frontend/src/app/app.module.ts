@@ -22,6 +22,7 @@ import {EnclosureService} from "./services/enclosure.service";
 import {KeeperService} from "./services/keeper.service";
 import {AllenclosuresComponent} from "./enclosures/allenclosures.component";
 import {AllkeepersComponent} from "./keepers/allkeepers.component";
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {AllkeepersComponent} from "./keepers/allkeepers.component";
     AppRoutingModule,
     HttpClientModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
   providers: [
     AnimalService,

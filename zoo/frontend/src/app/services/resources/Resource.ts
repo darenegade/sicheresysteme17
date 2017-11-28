@@ -1,3 +1,3 @@
 export class Resource<T> {
-  _embedded: Object;
+  _embedded: T;
 }

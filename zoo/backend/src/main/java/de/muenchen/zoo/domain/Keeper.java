@@ -36,6 +36,10 @@ public class Keeper extends BaseEntity {
     @NotNull
     String name;
 
+    @NonNull
+    @NotNull
+    String profileimg;
+
     @ManyToMany
     @JoinTable(
         name = "Keeper_Enclosures",

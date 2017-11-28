@@ -3,7 +3,6 @@ CREATE TABLE Animal (
   name varchar(50) NOT NULL,
   type varchar(50) NOT NULL,
   profileimg varchar NOT NULL,
-  description varchar(100),
   weight number,
   PRIMARY KEY (id),
 );
@@ -19,7 +18,6 @@ CREATE TABLE Enclosure (
 CREATE TABLE Keeper (
   id bigint(20) NOT NULL AUTO_INCREMENT,
   name varchar(50) NOT NULL,
-  profileimg varchar NOT NULL,
   PRIMARY KEY (id),
 );
 

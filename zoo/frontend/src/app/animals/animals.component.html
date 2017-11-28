@@ -1,1 +1,14 @@
-<mat-card style="margin: 10px" *ngFor="let animal of animals"> {{ animal.name }} </mat-card>
+<mat-card class="animal-card" style="margin: 10px; display: inline-block" *ngFor="let animal of animals" >
+  <mat-card-header>
+    <mat-card-title>{{ animal.name }}</mat-card-title>
+    <mat-card-subtitle>{{ animal.type }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{animal.profileimg}}>
+  <mat-card-content>
+    <p>
+      {{animal.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+  </mat-card-actions>
+</mat-card>

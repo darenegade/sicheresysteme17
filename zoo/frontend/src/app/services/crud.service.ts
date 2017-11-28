@@ -3,12 +3,12 @@ import {HttpClient, HttpHeaders } from "@angular/common/http";
 import {MessageService} from "../message.service";
 import {Base} from "../domain/base";
 import {Observable} from "rxjs/Observable";
-import {Resource} from "./Resource";
+import {Resource} from "./resources/Resource";
 import 'rxjs/Rx';
 
 @Injectable()
 
-export abstract class CRUDService<T extends Base> {
+export abstract class CRUDService<T extends Base, F> {
 
   constructor(
     private baseUrl: string,
@@ -20,10 +20,10 @@ export abstract class CRUDService<T extends Base> {
 
   private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  protected abstract getEntitiesFromResource(resource:  Resource<T[]>): T[];
+  protected abstract getEntitiesFromResource(resource:  Resource<F>): T[];
 
   getEntities(): Observable<T[]> {
-    return this.http.get<Resource<T[]>>(this.baseUrl)
+    return this.http.get<Resource<F>>(this.baseUrl)
       .map(resource => this.getEntitiesFromResource(resource));
   }
 

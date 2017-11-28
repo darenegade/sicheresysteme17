@@ -37,6 +37,12 @@ public class Animal extends BaseEntity {
     @NotNull
     String type;
 
+    @NonNull
+    @NotNull
+    String profileimg;
+
+    String description;
+
     @Min(0)
     double weight;
 }

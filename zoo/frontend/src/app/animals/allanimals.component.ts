@@ -3,18 +3,17 @@ import {AnimalService} from "../services/animal.service";
 import {Animal} from "../domain/animal";
 
 @Component({
-  selector: 'app-animals',
-  templateUrl: './animals.component.html',
-  styleUrls: ['./animals.component.css']
+  selector: 'app-allanimals',
+  templateUrl: './allanimals.component.html',
+  styleUrls: ['./allanimals.component.css']
 })
-export class AnimalsComponent implements OnInit {
+export class AllanimalsComponent implements OnInit {
 
   private animals: Animal[];
 
   constructor(private animalService: AnimalService) { }
 
   ngOnInit() {
-    this.animalService.getEntities().subscribe(animals => this.animals = animals);
+    this.animalService.getEntities().subscribe(animals => this.animals = animals );
   }
-
 }

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AnimalsComponent} from "./animals/animals.component";
+import {AllenclosuresComponent} from "./enclosures/allenclosures.component";
 
 const routes: Routes = [
-  { path: '', component: AnimalsComponent }
+  { path: '', component: AllenclosuresComponent }
 ];
 
 @NgModule({

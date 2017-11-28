@@ -4,7 +4,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import { AppComponent } from './app.component';
-import { AnimalsComponent } from './animals/animals.component';
+import { AnimalComponent } from './animals/animal.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
@@ -15,12 +15,27 @@ import {MatListModule} from '@angular/material/list';
 import {AnimalService} from "./services/animal.service";
 import {MatCardModule} from "@angular/material";
 
+import { AllanimalsComponent } from './animals/allanimals.component';
+import { EnclosureComponent } from './enclosures/enclosure.component';
+import { KeeperComponent } from './keepers/keeper.component';
+import {EnclosureService} from "./services/enclosure.service";
+import {KeeperService} from "./services/keeper.service";
+import {AllenclosuresComponent} from "./enclosures/allenclosures.component";
+import {AllkeepersComponent} from "./keepers/allkeepers.component";
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalsComponent,
-    MessagesComponent
+    AnimalComponent,
+    EnclosureComponent,
+    KeeperComponent,
+    MessagesComponent,
+    AllanimalsComponent,
+    AllenclosuresComponent,
+    AllkeepersComponent,
+    EnclosureComponent,
+    KeeperComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +49,8 @@ import {MatCardModule} from "@angular/material";
   ],
   providers: [
     AnimalService,
+    EnclosureService,
+    KeeperService,
     MessageService
   ],
   bootstrap: [AppComponent]

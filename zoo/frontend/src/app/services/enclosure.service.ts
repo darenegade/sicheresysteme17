@@ -3,7 +3,6 @@ import {CRUDService} from "./crud.service";
 import {Enclosure} from "../domain/enclosure";
 import {EnclosuresResource} from "./resources/enclosures.resource";
 import {Resource} from "./resources/Resource";
-import {MessageService} from "../message.service";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 import {AnimalsResource} from "./resources/animals.resource";
@@ -13,10 +12,9 @@ import {Animal} from "../domain/animal";
 export class EnclosureService extends CRUDService<Enclosure, EnclosuresResource>{
 
   constructor(
-    http: HttpClient,
-    messageService: MessageService
+    http: HttpClient
   ) {
-    super('/api/enclosures', http, messageService);
+    super('/api/enclosures', http);
   }
 
   protected getEntitiesFromResource(resource:  Resource<EnclosuresResource>): Enclosure[]{

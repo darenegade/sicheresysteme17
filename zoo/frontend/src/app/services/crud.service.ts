@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders } from "@angular/common/http";
-import {MessageService} from "../message.service";
 import {Base} from "../domain/base";
 import {Observable} from "rxjs/Observable";
 import {Resource} from "./resources/Resource";
@@ -13,7 +12,6 @@ export abstract class CRUDService<T extends Base, F> {
   constructor(
     protected baseUrl: string,
     protected http: HttpClient,
-    protected messageService: MessageService
   ) {
 
   }
@@ -45,10 +43,5 @@ export abstract class CRUDService<T extends Base, F> {
 
   deleteEntity(entity: T): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${entity.id}`, { headers: this.headers });
-  }
-
-  /** Log a Service message with the MessageService */
-  private log(message: string) {
-    this.messageService.add('HeroService: ' + message);
   }
 }

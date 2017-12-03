@@ -1,5 +1,14 @@
 <mat-toolbar color="primary">
   <span>{{title}}</span>
+  <span class="example-fill-remaining-space"></span>
+  <nav style="height: 95%">
+    <button mat-button routerLink="/animals" routerLinkActive="active"
+       style="height: 100%">Tiere</button>
+    <button mat-button routerLink="/enclosures" routerLinkActive="active"
+       style="height: 100%">Gehege</button>
+    <button mat-button routerLink="/keepers" routerLinkActive="active"
+       style="height: 100%">Pfleger</button>
+  </nav>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

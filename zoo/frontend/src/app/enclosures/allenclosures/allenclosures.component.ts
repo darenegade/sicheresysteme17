@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Enclosure} from "../domain/enclosure";
-import {EnclosureService} from "../services/enclosure.service";
+import {Enclosure} from "../../domain/enclosure";
+import {EnclosureService} from "../../services/enclosure.service";
 
 @Component({
   selector: 'app-allenclosures',

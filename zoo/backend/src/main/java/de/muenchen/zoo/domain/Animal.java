@@ -44,5 +44,5 @@ public class Animal extends BaseEntity {
     String description;
 
     @Min(0)
-    double weight;
+    double size;
 }

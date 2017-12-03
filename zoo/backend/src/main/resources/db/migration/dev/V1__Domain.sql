@@ -4,7 +4,7 @@ CREATE TABLE Animal (
   type varchar(50) NOT NULL,
   profileimg varchar NOT NULL,
   description varchar(100),
-  weight number,
+  size number,
   PRIMARY KEY (id),
 );
 

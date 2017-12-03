@@ -1,0 +1,29 @@
+<form (ngSubmit)="onSubmit(); form.reset()" #form>
+  <mat-card class="big-card">
+    <mat-card-content>
+      <div style="width: 45%; display: inline-block; vertical-align: top">
+        <mat-form-field style="width: 90%">
+          <input matInput [(ngModel)]="animal.name" placeholder="Name" name="name" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width: 90%">
+          <input matInput [(ngModel)]="animal.type" placeholder="Art" name="type" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width: 90%">
+          <input matInput [(ngModel)]="animal.size" type="number" placeholder="Gr&ouml;ße" name="size" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width: 90%">
+          <textarea matInput [(ngModel)]="animal.description" placeholder="Beschreibung" name="description"
+                    required></textarea>
+        </mat-form-field>
+        <button mat-button type="submit">Speichern</button>
+      </div>
+      <div style="width: 45%; display: inline-block">
+        <img-cropper [image]="data" [settings]="cropperSettings"
+        style="width: 100%;"></img-cropper>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>

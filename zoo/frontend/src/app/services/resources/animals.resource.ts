@@ -1,4 +1,4 @@
-import {Animal} from "../../domain/animal";
+import {Animal} from '../../domain/animal';
 
 export class AnimalsResource {
 

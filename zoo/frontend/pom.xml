@@ -89,6 +89,8 @@
               <directory>.</directory>
               <includes>
                 <include>dist/**/*.*</include>
+                <include>node_modules/**/*.*</include>
+                <include>ui-src/**/*.*</include>
               </includes>
               <followSymlinks>false</followSymlinks>
             </fileset>

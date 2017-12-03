@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Enclosure} from "../domain/enclosure";
-import {EnclosureService} from "../services/enclosure.service";
-import {Animal} from "../domain/animal";
+import {Enclosure} from '../domain/enclosure';
+import {EnclosureService} from '../services/enclosure.service';
+import {Animal} from '../domain/animal';
 
 @Component({
   selector: 'app-enclosure',
@@ -14,14 +14,15 @@ export class EnclosureComponent implements OnInit {
 
   @Input() animals: Animal[];
 
-  constructor(private enclosureService: EnclosureService) { }
+  constructor(private enclosureService: EnclosureService) {
+  }
 
   ngOnInit() {
-    this.enclosureService.getAnimals(this.enclosure.id).subscribe(animals => this.animals = animals)
+    this.enclosureService.getAnimals(this.enclosure.id).subscribe(animals => this.animals = animals);
   }
 
   reserved(): number {
-    if(this.animals == null){
+    if (this.animals == null) {
       return 0;
     }
     return this.animals

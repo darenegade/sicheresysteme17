@@ -1,11 +1,8 @@
-import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders } from "@angular/common/http";
-import {Base} from "../domain/base";
-import {Observable} from "rxjs/Observable";
-import {Resource} from "./resources/Resource";
-import 'rxjs/Rx';
-
-@Injectable()
+import {HttpClient, HttpHeaders } from '@angular/common/http';
+import {Base} from '../domain/base';
+import {Observable} from 'rxjs/Observable';
+import {Resource} from './resources/Resource';
+import 'rxjs/add/operator/map';
 
 export abstract class CRUDService<T extends Base, F> {
 
@@ -38,7 +35,7 @@ export abstract class CRUDService<T extends Base, F> {
 
   updateEntity(entity: T): Observable<T> {
     return this.http
-      .post<T>(`${this.baseUrl}/${entity.id}`, JSON.stringify(entity), { headers: this.headers })
+      .post<T>(`${this.baseUrl}/${entity.id}`, JSON.stringify(entity), { headers: this.headers });
   }
 
   deleteEntity(entity: T): Observable<void> {

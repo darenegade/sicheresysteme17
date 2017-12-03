@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Enclosure} from "../../domain/enclosure";
-import {EnclosureService} from "../../services/enclosure.service";
+import {Enclosure} from '../../domain/enclosure';
+import {EnclosureService} from '../../services/enclosure.service';
 
 @Component({
   selector: 'app-allenclosures',
@@ -9,7 +9,7 @@ import {EnclosureService} from "../../services/enclosure.service";
 })
 export class AllenclosuresComponent implements OnInit {
 
-  private enclosures: Enclosure[];
+  public enclosures: Enclosure[];
 
   constructor(private enclosureService: EnclosureService) { }
 

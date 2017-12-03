@@ -1,4 +1,4 @@
-import {Enclosure} from "../../domain/enclosure";
+import {Enclosure} from '../../domain/enclosure';
 
 export class EnclosuresResource {
 

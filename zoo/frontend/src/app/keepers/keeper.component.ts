@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Keeper} from "../domain/keeper";
+import {Keeper} from '../domain/keeper';
 
 @Component({
   selector: 'app-keeper',

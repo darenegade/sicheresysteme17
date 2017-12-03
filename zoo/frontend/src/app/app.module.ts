@@ -1,22 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatToolbarModule} from '@angular/material/toolbar';
-
 
 import { AppComponent } from './app.component';
 import { AnimalComponent } from './animals/animal.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import {HttpClientModule} from "@angular/common/http";
-import { MessageService } from './message.service';
-import {MatListModule} from '@angular/material/list';
-import {AnimalService} from "./services/animal.service";
+import { HttpClientModule} from '@angular/common/http';
+import { MatListModule} from '@angular/material/list';
+import { AnimalService} from './services/animal.service';
 import {
   MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
-  MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatExpansionModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
   MatFormFieldModule,
   MatGridListModule,
   MatInputModule,
@@ -32,22 +34,22 @@ import {
   MatSlideToggleModule,
   MatSnackBarModule,
   MatSortModule,
-  MatStepperModule, MatTableModule,
+  MatStepperModule,
+  MatTableModule,
   MatTabsModule,
+  MatToolbarModule,
   MatTooltipModule
-} from "@angular/material";
+} from '@angular/material';
 
 import { AllanimalsComponent } from './animals/allanimals/allanimals.component';
 import { EnclosureComponent } from './enclosures/enclosure.component';
 import { KeeperComponent } from './keepers/keeper.component';
-import {EnclosureService} from "./services/enclosure.service";
-import {KeeperService} from "./services/keeper.service";
-import {AllenclosuresComponent} from "./enclosures/allenclosures/allenclosures.component";
-import {AllkeepersComponent} from "./keepers/allkeepers/allkeepers.component";
+import {EnclosureService} from './services/enclosure.service';
+import {KeeperService} from './services/keeper.service';
+import {AllenclosuresComponent} from './enclosures/allenclosures/allenclosures.component';
+import {AllkeepersComponent} from './keepers/allkeepers/allkeepers.component';
 import {MatIconModule} from '@angular/material/icon';
 import { AnimalcreateComponent } from './animals/animalcreate/animalcreate.component';
-import {ImageCropperModule} from "ng2-img-cropper";
-
 
 @NgModule({
   declarations: [
@@ -65,7 +67,6 @@ import {ImageCropperModule} from "ng2-img-cropper";
   imports: [
     BrowserModule,
     FormsModule,
-    MatToolbarModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
@@ -101,14 +102,12 @@ import {ImageCropperModule} from "ng2-img-cropper";
     MatTooltipModule,
     MatStepperModule,
     MatFormFieldModule,
-    ReactiveFormsModule,
-    ImageCropperModule
+    ReactiveFormsModule
   ],
   providers: [
     AnimalService,
     EnclosureService,
-    KeeperService,
-    MessageService
+    KeeperService
   ],
   bootstrap: [AppComponent]
 })

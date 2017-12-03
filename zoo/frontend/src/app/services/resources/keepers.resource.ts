@@ -1,4 +1,4 @@
-import {Keeper} from "../../domain/keeper";
+import {Keeper} from '../../domain/keeper';
 
 export class KeepersResource {
 

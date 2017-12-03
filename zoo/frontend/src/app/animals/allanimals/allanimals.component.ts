@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AnimalService} from "../../services/animal.service";
-import {Animal} from "../../domain/animal";
+import {AnimalService} from '../../services/animal.service';
+import {Animal} from '../../domain/animal';
 
 @Component({
   selector: 'app-allanimals',
@@ -9,7 +9,7 @@ import {Animal} from "../../domain/animal";
 })
 export class AllanimalsComponent implements OnInit {
 
-  private animals: Animal[];
+  public animals: Animal[];
 
   constructor(private animalService: AnimalService) { }
 

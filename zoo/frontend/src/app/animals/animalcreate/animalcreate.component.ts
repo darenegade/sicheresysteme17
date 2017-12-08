@@ -10,16 +10,25 @@ import {AnimalService} from '../../services/animal.service';
 export class AnimalcreateComponent implements OnInit {
 
   animal: Animal = new Animal();
+  private fileReader: FileReader = new FileReader();
 
   constructor(private animalService: AnimalService) {
   }
 
   ngOnInit() {
+    this.fileReader.onload = (e : any) => {
+      this.animal.profileimg = e.target.result;
+    };
   }
 
   onSubmit() {
-    /* Set Image */
-
     this.animalService.createEntity(this.animal).subscribe();
+    this.animal = new Animal();
+  }
+
+  imageChanged(fileInput: any) {
+    if (fileInput.target.files && fileInput.target.files[0]) {
+      this.fileReader.readAsDataURL(fileInput.target.files[0]);
+    }
   }
 }

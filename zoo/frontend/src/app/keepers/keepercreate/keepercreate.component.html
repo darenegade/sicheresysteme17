@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit(); form.reset()" #form>
+  <mat-card class="big-card">
+    <mat-card-content>
+      <div style="width: 45%; display: inline-block; vertical-align: top">
+        <mat-form-field style="width: 90%">
+          <input matInput [(ngModel)]="keeper.name" placeholder="Name" name="name" required>
+        </mat-form-field>
+        <br>
+        <input type="file" (change)="imageChanged($event)" accept="image/*" name="image" required>
+        <br>
+      </div>
+      <div style="width: 45%; display: inline-block">
+        <i *ngIf="keeper.profileimg == null">No image choosed</i>
+        <img id="preview" src="{{keeper.profileimg}}" width="100%">
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button type="submit">Speichern</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

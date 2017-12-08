@@ -50,6 +50,8 @@ import {AllenclosuresComponent} from './enclosures/allenclosures/allenclosures.c
 import {AllkeepersComponent} from './keepers/allkeepers/allkeepers.component';
 import {MatIconModule} from '@angular/material/icon';
 import { AnimalcreateComponent } from './animals/animalcreate/animalcreate.component';
+import {EnclosurecreateComponent} from './enclosures/enclosurecreate/enclosurecreate.component';
+import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { AnimalcreateComponent } from './animals/animalcreate/animalcreate.compo
     AllkeepersComponent,
     EnclosureComponent,
     KeeperComponent,
-    AnimalcreateComponent
+    AnimalcreateComponent,
+    EnclosurecreateComponent,
+    KeepercreateComponent
   ],
   imports: [
     BrowserModule,

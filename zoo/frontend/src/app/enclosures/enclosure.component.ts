@@ -22,12 +22,12 @@ export class EnclosureComponent implements OnInit {
   }
 
   reserved(): number {
-    if (this.animals == null) {
+    if (this.animals == null || this.animals.length == 0) {
       return 0;
     }
     return this.animals
       .map(animal => animal.size)
-      .reduce((previousValue, currentValue) => previousValue + currentValue)
+      .reduce((previousValue, currentValue) => previousValue + currentValue, 0)
       .valueOf();
   }
 

@@ -14,18 +14,20 @@
           <input matInput [(ngModel)]="animal.size" type="number" placeholder="Gr&ouml;ße" name="size" required>
         </mat-form-field>
         <br>
-        <input type="file" (change)="imageChanged($event)" accept="image/*" name="image" required>
+        <input type="file" (change)="imageChanged($event)" accept="image/png, image/jpeg, image/jpg)" name="image" required>
         <br>
         <mat-form-field style="width: 90%">
           <textarea matInput [(ngModel)]="animal.description" placeholder="Beschreibung" name="description"
                     required></textarea>
         </mat-form-field>
-        <button mat-button type="submit">Speichern</button>
       </div>
       <div style="width: 45%; display: inline-block">
         <i *ngIf="animal.profileimg == null">No image choosed</i>
         <img id="preview" src="{{animal.profileimg}}" width="100%">
       </div>
     </mat-card-content>
+    <mat-card-actions>
+      <button mat-button type="submit">Speichern</button>
+    </mat-card-actions>
   </mat-card>
 </form>

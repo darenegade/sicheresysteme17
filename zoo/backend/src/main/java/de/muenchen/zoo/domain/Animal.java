@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 /**
  * Organization: HM FK07.
@@ -39,6 +40,7 @@ public class Animal extends BaseEntity {
 
     @NonNull
     @NotNull
+    @Pattern(regexp = "data:image\\/(jpeg|png|jpg);base64,.*")
     String profileimg;
 
     String description;

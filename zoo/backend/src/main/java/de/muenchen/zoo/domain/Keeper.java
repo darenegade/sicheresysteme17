@@ -13,6 +13,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 /**
@@ -38,6 +39,7 @@ public class Keeper extends BaseEntity {
 
     @NonNull
     @NotNull
+    @Pattern(regexp = "data:image\\/(jpeg|png|jpg);base64,.*")
     String profileimg;
 
     @ManyToMany

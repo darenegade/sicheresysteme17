@@ -61,10 +61,7 @@ import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.compone
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientXsrfModule.withOptions({
-      cookieName: 'XSRF_TOKEN',
-      headerName: 'X-XSRF-TOKEN'
-    }),
+    HttpClientXsrfModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,

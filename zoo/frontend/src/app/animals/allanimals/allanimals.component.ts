@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AnimalService} from '../../services/animal.service';
 import {Animal} from '../../domain/animal';
+import {AnimalcreateComponent} from '../animalcreate/animalcreate.component';
+import {MatDialog} from '@angular/material';
 
 @Component({
   selector: 'app-allanimals',
@@ -9,11 +11,25 @@ import {Animal} from '../../domain/animal';
 })
 export class AllanimalsComponent implements OnInit {
 
-  public animals: Animal[];
+  public animals: Animal[] = [];
 
-  constructor(private animalService: AnimalService) { }
+  constructor(
+    public dialog: MatDialog,
+    private animalService: AnimalService) { }
 
   ngOnInit() {
-    this.animalService.getEntities().subscribe(animals => this.animals = animals );
+    this.animalService.getEntities().subscribe(animal => this.animals.push(animal) );
+  }
+
+  openDialog() {
+    let dialogRef = this.dialog.open(AnimalcreateComponent, {
+      width: '800px',
+      data: { }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result != null)
+        this.animals.push(result);
+    });
   }
 }

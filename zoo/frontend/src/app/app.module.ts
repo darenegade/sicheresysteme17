@@ -54,20 +54,6 @@ import {EnclosurecreateComponent} from './enclosures/enclosurecreate/enclosurecr
 import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AnimalComponent,
-    EnclosureComponent,
-    KeeperComponent,
-    AllanimalsComponent,
-    AllenclosuresComponent,
-    AllkeepersComponent,
-    EnclosureComponent,
-    KeeperComponent,
-    AnimalcreateComponent,
-    EnclosurecreateComponent,
-    KeepercreateComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -113,6 +99,38 @@ import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.compone
     EnclosureService,
     KeeperService
   ],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    AnimalComponent,
+    EnclosureComponent,
+    KeeperComponent,
+    AllanimalsComponent,
+    AllenclosuresComponent,
+    AllkeepersComponent,
+    EnclosureComponent,
+    KeeperComponent,
+    AnimalcreateComponent,
+    EnclosurecreateComponent,
+    KeepercreateComponent
+  ],
+  bootstrap: [
+    AppComponent,
+    AnimalComponent,
+    EnclosureComponent,
+    KeeperComponent,
+    AllanimalsComponent,
+    AllenclosuresComponent,
+    AllkeepersComponent,
+    EnclosureComponent,
+    KeeperComponent,
+    AnimalcreateComponent,
+    EnclosurecreateComponent,
+    KeepercreateComponent
+  ],
+  entryComponents: [
+    AnimalcreateComponent,
+    EnclosurecreateComponent,
+    KeepercreateComponent
+  ]
 })
 export class AppModule { }

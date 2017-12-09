@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Animal} from '../../domain/animal';
 import {AnimalService} from '../../services/animal.service';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-animalcreate',
@@ -12,7 +13,10 @@ export class AnimalcreateComponent implements OnInit {
   animal: Animal = new Animal();
   private fileReader: FileReader = new FileReader();
 
-  constructor(private animalService: AnimalService) {
+  constructor(
+    public dialogRef: MatDialogRef<AnimalcreateComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private animalService: AnimalService) {
   }
 
   ngOnInit() {
@@ -21,9 +25,8 @@ export class AnimalcreateComponent implements OnInit {
     };
   }
 
-  onSubmit() {
-    this.animalService.createEntity(this.animal).subscribe();
-    this.animal = new Animal();
+  onSave() {
+    this.animalService.createEntity(this.animal).subscribe(animal => this.dialogRef.close(animal));
   }
 
   imageChanged(fileInput: any) {

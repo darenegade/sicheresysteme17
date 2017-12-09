@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Keeper} from '../../domain/keeper';
 import {KeeperService} from '../../services/keeper.service';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-keepercreate',
@@ -12,7 +13,10 @@ export class KeepercreateComponent implements OnInit {
   keeper: Keeper = new Keeper();
   private fileReader: FileReader = new FileReader();
 
-  constructor(private keeperService: KeeperService) {
+  constructor(
+    public dialogRef: MatDialogRef<KeepercreateComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private keeperService: KeeperService) {
   }
 
   ngOnInit() {
@@ -21,9 +25,8 @@ export class KeepercreateComponent implements OnInit {
     };
   }
 
-  onSubmit() {
-    this.keeperService.createEntity(this.keeper).subscribe();
-    this.keeper = new Keeper();
+  onSave() {
+    this.keeperService.createEntity(this.keeper).subscribe(keeper => this.dialogRef.close(keeper));
   }
 
   imageChanged(fileInput: any) {

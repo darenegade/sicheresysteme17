@@ -1,20 +1,17 @@
-<form (ngSubmit)="onSubmit(); form.reset()" #form>
-  <mat-card class="medium-card">
-    <mat-card-content>
-        <mat-form-field style="width: 90%">
-          <input matInput [(ngModel)]="enclosure.name" placeholder="Name" name="name" required>
-        </mat-form-field>
-        <br>
-      <mat-form-field style="width: 90%">
-        <input matInput [(ngModel)]="enclosure.type" placeholder="Typ" name="type" required>
-      </mat-form-field>
-      <br>
-      <mat-form-field style="width: 90%">
-        <input matInput [(ngModel)]="enclosure.size" type="number" placeholder="Gr&ouml;ße" name="size" required>
-      </mat-form-field>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button type="submit">Speichern</button>
-    </mat-card-actions>
-  </mat-card>
-</form>
+<h1 mat-dialog-title>Neues Gehege</h1>
+<div mat-dialog-content>
+  <mat-form-field style="width: 90%">
+    <input matInput [(ngModel)]="enclosure.name" placeholder="Name" name="name" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field style="width: 90%">
+    <input matInput [(ngModel)]="enclosure.type" placeholder="Typ" name="type" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field style="width: 90%">
+    <input matInput [(ngModel)]="enclosure.size" type="number" placeholder="Gr&ouml;ße" name="size" required>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onSave()" tabindex="-1">Speichern</button>
+  </div>
+</div>

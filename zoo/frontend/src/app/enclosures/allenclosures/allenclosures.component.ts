@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Enclosure} from '../../domain/enclosure';
 import {EnclosureService} from '../../services/enclosure.service';
+import {MatDialog} from '@angular/material';
+import {AnimalcreateComponent} from '../../animals/animalcreate/animalcreate.component';
+import {EnclosurecreateComponent} from '../enclosurecreate/enclosurecreate.component';
 
 @Component({
   selector: 'app-allenclosures',
@@ -9,11 +12,25 @@ import {EnclosureService} from '../../services/enclosure.service';
 })
 export class AllenclosuresComponent implements OnInit {
 
-  public enclosures: Enclosure[];
+  public enclosures: Enclosure[] = [];
 
-  constructor(private enclosureService: EnclosureService) { }
+  constructor(
+    public dialog: MatDialog,
+    private enclosureService: EnclosureService) { }
 
   ngOnInit() {
-    this.enclosureService.getEntities().subscribe(enclosures => this.enclosures = enclosures );
+    this.enclosureService.getEntities().subscribe(enclosure => this.enclosures.push(enclosure) );
+  }
+
+  openDialog() {
+    let dialogRef = this.dialog.open(EnclosurecreateComponent, {
+      width: '400px',
+      data: { }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result != null)
+        this.enclosures.push(result);
+    });
   }
 }

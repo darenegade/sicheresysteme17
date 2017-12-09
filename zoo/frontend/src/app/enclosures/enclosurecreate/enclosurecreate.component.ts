@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Enclosure} from '../../domain/enclosure';
 import {EnclosureService} from '../../services/enclosure.service';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-enclosurecreate',
@@ -11,15 +12,16 @@ export class EnclosurecreateComponent implements OnInit {
 
   enclosure: Enclosure = new Enclosure();
 
-  constructor(private enclosureService: EnclosureService) {
+  constructor(
+    public dialogRef: MatDialogRef<EnclosurecreateComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private enclosureService: EnclosureService) {
   }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    this.enclosureService.createEntity(this.enclosure).subscribe();
-    this.enclosure = new Enclosure();
+  onSave() {
+    this.enclosureService.createEntity(this.enclosure).subscribe(enclosure => this.dialogRef.close(enclosure));
   }
-
 }

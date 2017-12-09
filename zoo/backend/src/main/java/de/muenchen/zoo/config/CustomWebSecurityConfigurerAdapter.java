@@ -37,5 +37,10 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
                 .authenticated()
                 .and()
                 .httpBasic();
+
+        http.csrf()
+                .disable();
+        //    Until Angular impl. matches the Spring way
+        //  .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
     }
 }

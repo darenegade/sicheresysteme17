@@ -1,14 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { AnimalComponent } from './animals/animal.component';
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule} from '@angular/common/http';
-import { MatListModule} from '@angular/material/list';
-import { AnimalService} from './services/animal.service';
+import {AppComponent} from './app.component';
+import {AnimalComponent} from './animals/animal.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing.module';
+import {HttpClientModule, HttpClientXsrfModule} from '@angular/common/http';
+import {MatListModule} from '@angular/material/list';
+import {AnimalService} from './services/animal.service';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -29,7 +29,8 @@ import {
   MatProgressSpinnerModule,
   MatRadioModule,
   MatRippleModule,
-  MatSelectModule, MatSidenavModule,
+  MatSelectModule,
+  MatSidenavModule,
   MatSliderModule,
   MatSlideToggleModule,
   MatSnackBarModule,
@@ -41,15 +42,15 @@ import {
   MatTooltipModule
 } from '@angular/material';
 
-import { AllanimalsComponent } from './animals/allanimals/allanimals.component';
-import { EnclosureComponent } from './enclosures/enclosure.component';
-import { KeeperComponent } from './keepers/keeper.component';
+import {AllanimalsComponent} from './animals/allanimals/allanimals.component';
+import {EnclosureComponent} from './enclosures/enclosure.component';
+import {KeeperComponent} from './keepers/keeper.component';
 import {EnclosureService} from './services/enclosure.service';
 import {KeeperService} from './services/keeper.service';
 import {AllenclosuresComponent} from './enclosures/allenclosures/allenclosures.component';
 import {AllkeepersComponent} from './keepers/allkeepers/allkeepers.component';
 import {MatIconModule} from '@angular/material/icon';
-import { AnimalcreateComponent } from './animals/animalcreate/animalcreate.component';
+import {AnimalcreateComponent} from './animals/animalcreate/animalcreate.component';
 import {EnclosurecreateComponent} from './enclosures/enclosurecreate/enclosurecreate.component';
 import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.component';
 
@@ -60,6 +61,10 @@ import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.compone
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpClientXsrfModule.withOptions({
+      cookieName: "XSRF_TOKEN",
+      headerName: "X-XSRF-TOKEN"
+    }),
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,

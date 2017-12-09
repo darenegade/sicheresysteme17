@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Keeper} from '../../domain/keeper';
 import {KeeperService} from '../../services/keeper.service';
 import {MatDialog} from '@angular/material';
-import {AnimalcreateComponent} from '../../animals/animalcreate/animalcreate.component';
 import {KeepercreateComponent} from '../keepercreate/keepercreate.component';
 
 @Component({
@@ -14,22 +13,22 @@ export class AllkeepersComponent implements OnInit {
 
   public keepers: Keeper[] = [];
 
-  constructor(
-    public dialog: MatDialog,
-    private keeperService: KeeperService) { }
+  constructor(public dialog: MatDialog,
+              private keeperService: KeeperService) {
+  }
 
   ngOnInit() {
-    this.keeperService.getEntities().subscribe(keeper => this.keepers.push(keeper) );
+    this.keeperService.getEntities().subscribe(keeper => this.keepers.push(keeper));
   }
 
   openDialog() {
     let dialogRef = this.dialog.open(KeepercreateComponent, {
       width: '800px',
-      data: { }
+      data: {}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(result != null)
+      if (result != null)
         this.keepers.push(result);
     });
   }

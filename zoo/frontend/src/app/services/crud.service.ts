@@ -10,7 +10,7 @@ import 'rxjs/add/operator/shareReplay';
 export abstract class CRUDService<T extends Base, F> {
 
   constructor(protected baseUrl: string,
-              protected http: HttpClient,) {
+              protected http: HttpClient) {
 
   }
 

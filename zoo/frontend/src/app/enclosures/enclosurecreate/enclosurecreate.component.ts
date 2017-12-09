@@ -12,10 +12,9 @@ export class EnclosurecreateComponent implements OnInit {
 
   enclosure: Enclosure = new Enclosure();
 
-  constructor(
-    public dialogRef: MatDialogRef<EnclosurecreateComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private enclosureService: EnclosureService) {
+  constructor(public dialogRef: MatDialogRef<EnclosurecreateComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              private enclosureService: EnclosureService) {
   }
 
   ngOnInit() {

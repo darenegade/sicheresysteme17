@@ -22,7 +22,7 @@ export class EnclosureComponent implements OnInit {
   }
 
   reserved(): number {
-    if (this.animals == null || this.animals.length == 0) {
+    if (this.animals == null || this.animals.length === 0) {
       return 0;
     }
     return this.animals

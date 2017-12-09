@@ -24,10 +24,10 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("leiter").password("1234")
-                .authorities("ROLE_LEITER")
+                .authorities("ROLE_READ", "ROLE_WRITE")
                 .and()
                 .withUser("pfleger").password("4321")
-                .authorities("ROLE_PFLEGER");
+                .authorities("ROLE_READ");
 
     }
 

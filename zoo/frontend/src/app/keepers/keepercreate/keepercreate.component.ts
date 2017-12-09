@@ -13,14 +13,13 @@ export class KeepercreateComponent implements OnInit {
   keeper: Keeper = new Keeper();
   private fileReader: FileReader = new FileReader();
 
-  constructor(
-    public dialogRef: MatDialogRef<KeepercreateComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private keeperService: KeeperService) {
+  constructor(public dialogRef: MatDialogRef<KeepercreateComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              private keeperService: KeeperService) {
   }
 
   ngOnInit() {
-    this.fileReader.onload = (e : any) => {
+    this.fileReader.onload = (e: any) => {
       this.keeper.profileimg = e.target.result;
     };
   }

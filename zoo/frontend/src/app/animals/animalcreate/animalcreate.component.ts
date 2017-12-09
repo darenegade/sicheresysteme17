@@ -13,14 +13,13 @@ export class AnimalcreateComponent implements OnInit {
   animal: Animal = new Animal();
   private fileReader: FileReader = new FileReader();
 
-  constructor(
-    public dialogRef: MatDialogRef<AnimalcreateComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private animalService: AnimalService) {
+  constructor(public dialogRef: MatDialogRef<AnimalcreateComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              private animalService: AnimalService) {
   }
 
   ngOnInit() {
-    this.fileReader.onload = (e : any) => {
+    this.fileReader.onload = (e: any) => {
       this.animal.profileimg = e.target.result;
     };
   }

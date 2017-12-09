@@ -3,6 +3,7 @@ package de.muenchen.zoo.repos;
 import de.muenchen.zoo.domain.Enclosure;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 /**
  * Organization: HM FK07.
@@ -14,5 +15,30 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  * System: 2,3 GHz Intel Core i7, 16 GB 1600 MHz DDR3
  */
 @RepositoryRestResource
+@PreAuthorize("hasRole('READ')")
 public interface EnclosureRepo extends CrudRepository<Enclosure, Long> {
+
+    @Override
+    @PreAuthorize("hasRole('WRITE')")
+    <S extends Enclosure> S save(S s);
+
+    @Override
+    @PreAuthorize("hasRole('WRITE')")
+    <S extends Enclosure> Iterable<S> save(Iterable<S> iterable);
+
+    @Override
+    @PreAuthorize("hasRole('WRITE')")
+    void delete(Long aLong);
+
+    @Override
+    @PreAuthorize("hasRole('WRITE')")
+    void delete(Enclosure animal);
+
+    @Override
+    @PreAuthorize("hasRole('WRITE')")
+    void delete(Iterable<? extends Enclosure> iterable);
+
+    @Override
+    @PreAuthorize("hasRole('WRITE')")
+    void deleteAll();
 }

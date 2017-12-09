@@ -13,22 +13,22 @@ export class AllanimalsComponent implements OnInit {
 
   public animals: Animal[] = [];
 
-  constructor(
-    public dialog: MatDialog,
-    private animalService: AnimalService) { }
+  constructor(public dialog: MatDialog,
+              private animalService: AnimalService) {
+  }
 
   ngOnInit() {
-    this.animalService.getEntities().subscribe(animal => this.animals.push(animal) );
+    this.animalService.getEntities().subscribe(animal => this.animals.push(animal));
   }
 
   openDialog() {
     let dialogRef = this.dialog.open(AnimalcreateComponent, {
       width: '800px',
-      data: { }
+      data: {}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(result != null)
+      if (result != null)
         this.animals.push(result);
     });
   }

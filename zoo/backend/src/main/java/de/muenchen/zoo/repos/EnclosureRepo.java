@@ -15,30 +15,30 @@ import org.springframework.security.access.prepost.PreAuthorize;
  * System: 2,3 GHz Intel Core i7, 16 GB 1600 MHz DDR3
  */
 @RepositoryRestResource
-@PreAuthorize("hasRole('READ')")
+@PreAuthorize("hasAuthority('READ')")
 public interface EnclosureRepo extends CrudRepository<Enclosure, Long> {
 
     @Override
-    @PreAuthorize("hasRole('WRITE')")
+    @PreAuthorize("hasAuthority('WRITE')")
     <S extends Enclosure> S save(S s);
 
     @Override
-    @PreAuthorize("hasRole('WRITE')")
+    @PreAuthorize("hasAuthority('WRITE')")
     <S extends Enclosure> Iterable<S> save(Iterable<S> iterable);
 
     @Override
-    @PreAuthorize("hasRole('WRITE')")
+    @PreAuthorize("hasAuthority('WRITE')")
     void delete(Long aLong);
 
     @Override
-    @PreAuthorize("hasRole('WRITE')")
+    @PreAuthorize("hasAuthority('WRITE')")
     void delete(Enclosure animal);
 
     @Override
-    @PreAuthorize("hasRole('WRITE')")
+    @PreAuthorize("hasAuthority('WRITE')")
     void delete(Iterable<? extends Enclosure> iterable);
 
     @Override
-    @PreAuthorize("hasRole('WRITE')")
+    @PreAuthorize("hasAuthority('WRITE')")
     void deleteAll();
 }

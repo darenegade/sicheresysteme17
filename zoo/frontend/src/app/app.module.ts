@@ -62,8 +62,8 @@ import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.compone
     AppRoutingModule,
     HttpClientModule,
     HttpClientXsrfModule.withOptions({
-      cookieName: "XSRF_TOKEN",
-      headerName: "X-XSRF-TOKEN"
+      cookieName: 'XSRF_TOKEN',
+      headerName: 'X-XSRF-TOKEN'
     }),
     MatAutocompleteModule,
     MatButtonModule,
@@ -138,4 +138,5 @@ import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.compone
     KeepercreateComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+}

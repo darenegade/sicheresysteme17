@@ -1,17 +1,13 @@
 package de.muenchen.zoo.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 /**
  * Organization: HM FK07.
@@ -32,10 +28,14 @@ import javax.validation.constraints.Pattern;
 public class Animal extends BaseEntity {
     @NonNull
     @NotNull
+    @Size(min = 3, max = 30)
+    @Pattern(regexp = "([A-Za-zäöüßÄÖÜ]|\\s)+")
     String name;
 
     @NonNull
     @NotNull
+    @Size(min = 3, max = 30)
+    @Pattern(regexp = "([A-Za-zäöüßÄÖÜ]|\\s)+")
     String type;
 
     @NonNull
@@ -43,6 +43,8 @@ public class Animal extends BaseEntity {
     @Pattern(regexp = "data:image\\/(jpeg|png|jpg);base64,.*")
     String profileimg;
 
+    @Size(max = 50)
+    @Pattern(regexp = "([A-Za-zäöüßÄÖÜ]|\\s)+")
     String description;
 
     @Min(0)

@@ -1,12 +1,14 @@
 package de.muenchen.zoo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 /**
@@ -25,11 +27,14 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        BCryptPasswordEncoder encoder = passwordEncoder();
+
         auth.inMemoryAuthentication()
-                .withUser("leiter").password("1234")
+                .passwordEncoder(encoder)
+                .withUser("leiter").password(encoder.encode("1234"))
                 .authorities("READ", "WRITE")
                 .and()
-                .withUser("pfleger").password("4321")
+                .withUser("pfleger").password(encoder.encode("4321"))
                 .authorities("READ");
 
     }
@@ -51,5 +56,10 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
 
         http.csrf()
                 .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+    }
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

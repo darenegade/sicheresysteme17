@@ -1,0 +1,167 @@
+# Aktionspunkte zu 3.1 Übernahme von Verantwortung durch die Leitungsebene
+- Die Leitungsebene informiert sich über mögliche Risiken und Konsequenzen aufgrund fehlender Informationssicherheit.
+- Die Leitungsebene übernimmt die Gesamtverantwortung für Informationssicherheit.
+- Die Leitungsebene initiiert den Informationssicherheitsprozess innerhalb der Institution und benennt einen Verantwortlichen für Informationssicherheit.
+
+
+# Aktionspunkte zu 3.2 Konzeption und Planung des Sicherheitsprozesses
+- Ansprechpartner für alle Geschäftsprozesse und Fachaufgaben benennen
+- Grobeinschätzung der Wertigkeit und des Sicherheitsniveaus von Informationen, Geschäftsprozessen und Fachaufgaben durchführen
+- Interne und externe Rahmenbedingungen ermitteln
+- Bedeutung der Geschäftsprozesse, Fachaufgaben und Informationen abschätzen
+- Allgemeine Informationssicherheitsziele festlegen
+- Konsolidierte Übersicht der vorhandenen Assets mit den zuvor gewonnenen Erkenntnissen erstellen
+- Zustimmung der Leitungsebene einholen
+
+# Aktionspunkte zu 3.3.4 Definition des Geltungsbereichs für die Sicherheitskonzeption
+- Festlegen, welche kritischen Geschäftsprozesse, Fachaufgaben oder Teile der Institution der Geltungsbereich beinhalten soll
+- Den Geltungsbereich eindeutig abgrenzen
+- Schnittstellen zu externen Partnern beschreiben
+
+
+# Aktionspunkte zu 3.3.5 Managemententscheidung
+- Erarbeitung einer Managementvorlage zur Entscheidungsfindung
+- Entscheidung, für welche Bereiche der Institution welche Vorgehensweise zu deren Absicherung gewählt werden soll
+- Dokumentation der Entscheidung und des Zeitplans für die Umsetzung
+
+# Aktionspunkte zu 3.4 Erstellung einer Sicherheitsleitlinie
+- Auftrag der Leitungsebene zur Erarbeitung einer Sicherheitsleitlinie einholen
+- Entwicklungsgruppe für die Sicherheitsleitlinie einberufen
+- Geltungsbereich und Inhalte festlegen
+- Inkraftsetzung der Sicherheitsleitlinie durch die Leitungsebene veranlassen
+- Sicherheitsleitlinie bekannt geben
+- Sicherheitsleitlinie regelmäßig überprüfen und gegebenenfalls aktualisieren
+
+
+# Aktionspunkte zu 4 Organisation des Sicherheitsprozesses
+- Rollen für die Gestaltung des Informationssicherheitsprozesses festlegen
+- Aufgaben und Verantwortungsbereiche den Rollen zuordnen
+- Personelle Ausstattung der Rollen festlegen
+- IS-Organisation dokumentieren
+- Informationssicherheitsmanagement in die organisationsweiten Abläufe und Prozesse integrieren
+- Wenn erforderlich, externe Experten hinzuziehen
+
+# Aktionspunkte zu 5.1 Klassifikation von Informationen
+- Klassifikationsschema erstellen, das eine korrekte, unkomplizierte und nachvollziehbare Einstufung von Informationen ermöglicht
+
+
+# Aktionspunkte zu 5.2 Informationsfluss im Informationssicherheitsprozess
+- Grundsätzliche Festlegungen zum Informationsfluss und zu den Meldewegen in Bezug auf den Informationssicherheitsprozess in einer entsprechenden Richtlinie dokumentieren und der Leitungsebene zur Verabschiedung vorlegen
+- Leitungsebene über die Ergebnisse von Überprüfungen und den Status des Informationssicherheitsprozesses informieren
+- Gegebenenfalls Entscheidungen über erforderliche Korrekturmaßnahmen einholen
+- Alle Teilaspekte des gesamten Informationssicherheitsprozesses nachvollziehbar dokumentieren und die Dokumentation auf dem aktuellen Stand halten
+- Bei Bedarf die Qualität der Dokumentation bewerten und gegebenenfalls nachbessern oder aktualisieren
+- Meldewege, die den Informationssicherheitsprozess betreffen, auf dem aktuellen Stand halten
+- Synergien zwischen dem Informationssicherheitsprozess und anderen Managementprozessen ausfindig machen
+
+# Aktionspunkte zu 8.1.1 Komplexitätsreduktion durch Gruppenbildung
+- Bei allen Teilaufgaben der Strukturanalyse gleichartige Objekte zu Gruppen zusammenfassen
+- Typ und Anzahl der jeweils zusammengefassten Objekte vermerken
+
+# Aktionspunkte zu 8.1.2 Erfassung der Geschäftsprozesse und der zugehörigen Informationen
+- Überblick über die Geschäftsprozesse erstellen
+- Geschäftsprozesse mit eindeutigen Nummern oder Kürzeln kennzeichnen
+- Zusammenhang zwischen Geschäftsprozessen und Anwendungen darstellen
+
+# Aktionspunkte zu 8.1.3 Erfassung der Anwendungen und der zugehörigen Informationen
+- Unter Einbeziehung der Verantwortlichen bzw. der Nutzer der Anwendungen herausfinden, welche Anwendungen für die betrachteten Geschäftsprozesse erforderlich sind
+- Übersicht über die Anwendungen erstellen und mit eindeutigen Nummern oder Kürzeln kennzeichnen
+
+# Aktionspunkte zu 8.1.4 Netzplanerhebung
+- Existierende grafische Darstellungen des Netzes, beispielsweise Netztopologiepläne, sichten
+- Netzpläne gegebenenfalls aktualisieren oder neu erstellen
+- Existierende Zusatzinformationen über die enthaltenen IT-, ICS- und IoT-Systeme sichten und gegebenenfalls aktualisieren und vervollständigen
+- Existierende Zusatzinformationen über die enthaltenen Kommunikationsverbindungen sichten und gegebenenfalls aktualisieren und vervollständigen
+
+# Aktionspunkte zu 8.1.5, 8.1.6 und 8.1.7 Erhebung der IT-, ICS-Systeme und sonstiger Geräte
+- Prüfen, ob existierende Datenbanken oder Übersichten über die vorhandenen oder geplanten IT-, ICS-Systeme sowie die sonstigen Geräte als Ausgangsbasis für die weitere Vorgehensweise geeignet sind
+- Liste der vernetzten und nicht vernetzten IT-Systeme, IoT- und ICS-Geräte erstellen beziehungsweise aktualisieren und vervollständigen
+- IT-, ICS-, IoT-Systeme beziehungsweise Systemgruppen mit eindeutigen Nummern oder Kürzeln kennzeichnen
+- Die Anwendungen den IT-, ICS-, IoT-Systemen (Servern, Clients, Netzkoppelelementen usw.) zuordnen, die für ihre Ausführung benötigt werden
+
+# Aktionspunkte zu 8.1.8 Erfassung der Räume
+- Liste aller bei der Erfassung der IT-, ICS- und IoT-Systeme notierten Liegenschaften, Gebäude und Räume erstellen
+- Weitere Räume ergänzen, in denen schutzbedürftige Informationen aufbewahrt oder auf andere Weise verarbeitet werden
+
+# Aktionspunkte zu 8.2.1 Definition der Schutzbedarfskategorien
+- Typische Schadensszenarien für die Definition von Schutzbedarfskategorien betrachten
+- Schutzbedarfskategorien „normal“, „hoch“ und „sehr hoch“ definieren beziehungsweise an die eigene Institution anpassen
+
+# Aktionspunkte zu 8.2.4, 8.2.5 und 8.2.6 Schutzbedarfsfeststellung für IT-, ICS-Systeme und sonstige Geräte
+- Schutzbedarf der IT-, ICS-Systeme und sonstigen Geräte anhand des Schutzbedarfs der Geschäftsprozesse und Anwendungen ermitteln
+- Abhängigkeiten, das Maximumprinzip und gegebenenfalls den Kumulations beziehungsweiseVerteilungseffekt berücksichtigen
+- Pro System(-Gruppe) die Ergebnisse für Vertraulichkeit, Integrität und Verfügbarkeit sowie die Begründungen dokumentieren
+
+# Aktionspunkte zu 8.2.7 Schutzbedarfsfeststellung für Räume
+- Schutzbedarf der Räume aus dem Schutzbedarf der Geschäftsprozesse, Anwendungen und IT-Systeme, ICS- und sonstigen Geräte ableiten
+- Abhängigkeiten, das Maximumprinzip und gegebenenfalls den Kumulationseffekt berücksichtigen
+- Ergebnisse und Begründungen nachvollziehbar dokumentieren
+
+# Aktionspunkte zu 8.2.8 Schutzbedarfsfeststellung für Kommunikationsverbindungen
+- Außenverbindungen erfassen und in tabellarischer oder grafischer Form dokumentieren
+- Verbindungen, über die kritische Informationen übertragen werden, identifizieren
+- Alle kritischen Kommunikationsverbindungen in tabellarischer oder grafischer Form dokumentieren
+
+# Aktionspunkte zu 8.2.9 Schlussfolgerungen aus den Ergebnissen der Schutzbedarfsfeststellung
+- Prüfen, ob Objekte mit erhöhten Sicherheitsanforderungen in Sicherheitszonen konzentriert werden können
+- Objekte mit erhöhten Sicherheitsanforderungen für eine Risikoanalyse vormerken
+
+# Aktionspunkte zu 8.3 Modellierung eines Informationsverbunds
+- Kapitel Schichtenmodell und Modellierung aus dem IT-GrundschutzKompendium systematischdurcharbeiten
+- Für jeden Baustein des IT-GrundschutzKompendiums ermitteln, auf welche Zielobjekte er imbetrachteten Informationsverbund anzuwenden ist
+- Zuordnung von Bausteinen zu Zielobjekten („IT-GrundschutzModell“) sowie die entsprechendenAnsprechpartner dokumentieren
+- Zielobjekte, die nicht geeignet modelliert werden können, für eine Risikoanalyse vormerken
+- Festlegung einer Reihenfolge für die Umsetzung der Bausteine
+- Sicherheitsanforderungen aus den identifizierten Bausteinen sorgfältig lesen und darauf aufbauend passende Sicherheitsmaßnahmen festlegen
+
+# Aktionspunkte zu 8.4.1 Organisatorische Vorarbeiten des IT-GrundschutzChecks- Hausinterne Dokumente mit Verfügungen und Regelungen sichten und Zuständigkeiten für diese Unterlagen klären
+- Feststellen, in welchem Umfang externe Stellen beteiligt werden müssen
+- Hauptansprechpartner für jeden in der Modellierung angewandten Baustein festlegen
+- Terminplan für Interviews abstimmen
+- Team für Interviews zusammenstellen
+
+# Aktionspunkte zu 8.4.2 Durchführung des SollIstVergleichs- Je nach Fachgebiet vorab Checklisten erstellen
+- Zielsetzung des IT-GrundschutzChecks den Interviewpartnern erläutern- Umsetzungsstatus der einzelnen Anforderungen erfragen
+- Antworten anhand von Stichproben am Objekt verifizieren
+- Den Befragten die Ergebnisse mitteilen
+
+# Aktionspunkte zu 8.4.3 Dokumentation der Ergebnisse
+- Stamminformationen über jedes Zielobjekt erfassen
+- Informationen zum IT-GrundschutzCheck und zum Umsetzungsstatus dokumentieren- Felder beziehungsweise Platzhalter für die Realisierungsplanung vorsehen
+
+# Aktionspunkte zu 8.5 Risikoanalyse
+- Grundsätzliche Vorgehensweise der Institution zur Durchführung von Risikoanalysen in einer Richtlinie dokumentieren und der Leitungsebene zur Verabschiedung vorlegen
+- Ermitteln, für welche Zielobjekte oder Gruppen von Zielobjekten eine Risikoanalyse durchgeführt werden soll
+- BSI-Standard 200-3 Risikoanalyse auf der Basis von IT-Grundschutz systematisch durcharbeiten
+- Ergebnisse der Risikoanalysen in das Sicherheitskonzept integrieren
+
+# Aktionspunkte zu 9 Umsetzung der Sicherheitskonzeption
+- Fehlende oder nur teilweise umgesetzte IT-GrundschutzAnforderungen sowie ergänzende Sicherheitsmaßnahmen in einer Tabelle zusammenfassen
+- Sicherheitsmaßnahmen konsolidieren, d. h. überflüssige Maßnahmen streichen, allgemeine Maßnahmen an die Gegebenheiten anpassen und alle Maßnahmen auf Eignung prüfen
+- Einmalige und wiederkehrende Kosten und den Aufwand für die umzusetzenden Maßnahmen ermitteln
+- Ersatzmaßnahmen für nicht finanzierbare oder nicht leistbare Maßnahmen auflisten
+- Entscheidung herbeiführen, welche Ressourcen für die Umsetzung der Maßnahmen eingesetzt werden sollen
+- Gegebenenfalls Restrisiko aufzeigen und Entscheidung der Leitungsebene dazur einholen
+- Umsetzungsreihenfolge für die Maßnahmen festlegen, begründen und dokumentieren
+- Termine für die Umsetzung festlegen und Verantwortung zuweisen
+- Verlauf der Umsetzung und Einhaltung der Termine überwachen
+- Betroffene Mitarbeiter schulen und sensibilisieren
+
+# Aktionspunkte zu 10 Aufrechterhaltung und kontinuierliche Verbesserung der Informationssicherheit
+- Grundsätzliche Vorgehensweise der Institution zur Überprüfung und Verbesserung des Informationssicherheitsprozesses in einer entsprechenden Richtlinie dokumentieren und der Leitungsebene zur Verabschiedung vorlegen
+- Messung der Zielerreichung in die Sicherheitsstrategie integrieren
+- Einhaltung des Realisierungsplans prüfen
+- Realisierung der beschlossenen Maßnahmen überprüfen
+- Wirksamkeit und Effizienz der beschlossenen Maßnahmen überprüfen
+- Prüfen, ob die Sicherheitsmaßnahmen akzeptiert werden, und gegebenenfalls nachbessern
+- Rollenkonflikt zwischen Ersteller und Prüfer beachten
+- Vertraulichkeit der Untersuchungsergebnisse sicherstellen
+- Eignung und Aktualität von Sicherheitszielen, -strategien und -konzeption prüfen
+- Angemessenheit der bereitgestellten Ressourcen und die Wirtschaftlichkeit der Sicherheitsstrategie und der -maßnahmen überprüfen
+- Ergebnisse der Überprüfungen in Form von Verbesserungen in den Informationssicherheitsprozess einfließen lassen
+
+# Aktionspunkte zu 11 Zertifizierung nach ISO 27001 auf der Basis von IT-Grundschutz
+- Informationen zum Schema für die ISO 27001-Zertifizierung auf der Basis von IT-Grundschutz lesen
+- Prüfen, ob die Bemühungen um Informationssicherheit anhand eines ISO 27001-Zertifikats auf der Basis von IT-Grundschutz transparent gemacht werden sollen
+- Gegebenenfalls prüfen, ob das Informationssicherheitsmanagement und der Sicherheitszustand die entsprechenden Voraussetzungen erfüllen
+- Gegebenenfalls den Zertifizierungsprozess initiieren

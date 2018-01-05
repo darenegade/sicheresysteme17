@@ -14,5 +14,3 @@ INSERT INTO enclosure_animals (enclosure_id, animal_id) VALUES (2, 3);
 
 INSERT INTO keeper_enclosures (keeper_id, enclosure_id) VALUES (1, 1);
 INSERT INTO keeper_enclosures (keeper_id, enclosure_id) VALUES (2, 2);
-
-

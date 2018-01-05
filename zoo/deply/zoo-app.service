@@ -1,0 +1,11 @@
+[Unit}
+Description=An application to manage a small Zoo
+After=syslog.target
+
+[Service]
+User=zoo-app
+Group=zoo-app
+ExecStart=/usr/bin/java -jar /opt/zoo-app/Zoo-app.jar SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

@@ -52,6 +52,8 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
                 .and()
                 .logout()
                 .and()
+                .requiresChannel().anyRequest().requiresSecure()
+                .and()
                 .sessionManagement()
                 .maximumSessions(1)
                 .maxSessionsPreventsLogin(true)

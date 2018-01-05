@@ -30,7 +30,7 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         BCryptPasswordEncoder encoder = passwordEncoder();
-
+        System.out.println("configureGlobal");
         auth.inMemoryAuthentication()
                 .passwordEncoder(encoder)
                 .withUser("leiter").password(encoder.encode("1234"))
@@ -38,6 +38,7 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
                 .and()
                 .withUser("pfleger").password(encoder.encode("4321"))
                 .authorities("READ");
+        System.out.println("configureGlobal " + auth);
 
     }
 

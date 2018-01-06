@@ -3,6 +3,7 @@ package de.muenchen.zoo.security;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.web.context.WebApplicationContext;
@@ -47,7 +48,7 @@ public class LoginAttemptFilter extends OncePerRequestFilter {
             loginAttemptService = webApplicationContext.getBean(LoginAttemptService.class);
         }
 
-        if (loginAttemptService.isBlocked(getClientIP(request))) {
+        if (loginAttemptService.isBlocked(getUserName(request))) {
 
             SecurityContextHolder.clearContext();
             failureHandler.onAuthenticationFailure(request, response, new BlockedUserException());
@@ -57,12 +58,8 @@ public class LoginAttemptFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    private String getClientIP(HttpServletRequest request) {
-        String xfHeader = request.getHeader("X-Forwarded-For");
-        if (xfHeader == null) {
-            return request.getRemoteAddr();
-        }
-        return xfHeader.split(",")[0];
+    private String getUserName(HttpServletRequest request) {
+        return request.getParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY);
     }
 
     protected boolean requiresAuthentication(HttpServletRequest request) {

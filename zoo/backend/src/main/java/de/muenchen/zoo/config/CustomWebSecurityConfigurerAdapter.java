@@ -13,6 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
+import javax.sql.DataSource;
+
 /**
  * Organization: HM FK07.
  * Project: zoo, de.muenchen.zoo.config
@@ -28,16 +30,16 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    DataSource dataSource;
+
+    @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         BCryptPasswordEncoder encoder = passwordEncoder();
 
-        auth.inMemoryAuthentication()
+        auth.jdbcAuthentication()
+                .dataSource(dataSource)
                 .passwordEncoder(encoder)
-                .withUser("leiter").password(encoder.encode("1234"))
-                .authorities("READ", "WRITE")
-                .and()
-                .withUser("pfleger").password(encoder.encode("4321"))
-                .authorities("READ");
+        ;
 
     }
 

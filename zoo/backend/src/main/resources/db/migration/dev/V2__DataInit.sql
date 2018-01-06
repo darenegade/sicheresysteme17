@@ -15,4 +15,13 @@ INSERT INTO Enclosure_Animals (enclosure_id, animal_id) VALUES (2, 3);
 INSERT INTO Keeper_Enclosures (keeper_id, enclosure_id) VALUES (1, 1);
 INSERT INTO Keeper_Enclosures (keeper_id, enclosure_id) VALUES (2, 2);
 
+INSERT INTO users (username, password, enabled)
+VALUES ('leiter', '$2a$04$8Z4TKMZpeYzIAXE1pm6ZsuTUpEpvArrgU2g.cXVMCkXvnvFQngY0O', TRUE);
+INSERT INTO users (username, password, enabled)
+VALUES ('pfleger', '$2a$04$kYNB6JoNYeLbK3iOfykoy.moZz7v.CKPZWpN/Q1Q4KJEhUnPXPKtu', TRUE);
+
+INSERT INTO authorities (username, authority) VALUES ('leiter', 'READ');
+INSERT INTO authorities (username, authority) VALUES ('leiter', 'WRITE');
+INSERT INTO authorities (username, authority) VALUES ('pfleger', 'READ');
+
 

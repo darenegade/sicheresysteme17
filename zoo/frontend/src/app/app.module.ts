@@ -10,35 +10,11 @@ import {HttpClientModule, HttpClientXsrfModule} from '@angular/common/http';
 import {MatListModule} from '@angular/material/list';
 import {AnimalService} from './services/animal.service';
 import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatFormFieldModule,
-  MatGridListModule,
-  MatInputModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
+  MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule,
+  MatDatepickerModule, MatDialogModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatInputModule,
+  MatMenuModule, MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule,
+  MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule,
+  MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
 
@@ -53,6 +29,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {AnimalcreateComponent} from './animals/animalcreate/animalcreate.component';
 import {EnclosurecreateComponent} from './enclosures/enclosurecreate/enclosurecreate.component';
 import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.component';
+import {LogoutService} from './services/logout.service';
+import {LogoutComponent} from './logout/logout.component';
 
 @NgModule({
   imports: [
@@ -99,7 +77,8 @@ import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.compone
   providers: [
     AnimalService,
     EnclosureService,
-    KeeperService
+    KeeperService,
+    LogoutService
   ],
   declarations: [
     AppComponent,
@@ -113,7 +92,8 @@ import {KeepercreateComponent} from './keepers/keepercreate/keepercreate.compone
     KeeperComponent,
     AnimalcreateComponent,
     EnclosurecreateComponent,
-    KeepercreateComponent
+    KeepercreateComponent,
+    LogoutComponent
   ],
   bootstrap: [
     AppComponent,

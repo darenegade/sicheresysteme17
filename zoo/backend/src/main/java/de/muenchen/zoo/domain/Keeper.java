@@ -33,7 +33,8 @@ public class Keeper extends BaseEntity {
 
     @NonNull
     @NotNull
-    @Pattern(regexp = "data:image\\/(jpeg|png|jpg);base64,.*")
+    @Size(min = 30, max = 200000)
+    @Pattern(regexp = "data:image\\/(jpeg|png|jpg);base64,(?:[A-Za-z0-9+/]{4})+(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$")
     String profileimg;
 
     @ManyToMany

@@ -1,0 +1,17 @@
+.example-fill-remaining-space {
+// This fills the remaining space, by using flexbox.
+// Every toolbar row uses a flexbox row layout.
+
+  flex: 1 1 auto;
+  flex-grow: 1;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+}
+
+.active {
+  color: #ff4081;
+}

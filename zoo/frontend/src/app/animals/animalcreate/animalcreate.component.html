@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Neues Tier</h1>
+<div mat-dialog-content>
+  <div style="width: 45%; display: inline-block; vertical-align: top">
+    <mat-form-field style="width: 90%">
+      <input matInput [(ngModel)]="animal.name" placeholder="Name" name="name" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width: 90%">
+      <input matInput [(ngModel)]="animal.type" placeholder="Art" name="type" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width: 90%">
+      <input matInput [(ngModel)]="animal.size" type="number" placeholder="Gr&ouml;ße" name="size" required>
+    </mat-form-field>
+    <br>
+    <input type="file" (change)="imageChanged($event)" accept="image/png, image/jpeg, image/jpg)" name="image"
+           required>
+    <br>
+    <mat-form-field style="width: 90%">
+          <textarea matInput [(ngModel)]="animal.description" placeholder="Beschreibung" name="description"
+                    required></textarea>
+    </mat-form-field>
+  </div>
+  <div style="width: 45%; display: inline-block">
+    <i *ngIf="animal.profileimg == null">No image choosed</i>
+    <img id="preview" src="{{animal.profileimg}}" width="100%">
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onSave()" tabindex="-1">Speichern</button>
+  </div>
+</div>

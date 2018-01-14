@@ -44,7 +44,7 @@ public class Animal extends BaseEntity {
     String profileimg;
 
     @Size(max = 50)
-    @Pattern(regexp = "([A-Za-zäöüßÄÖÜ]|\\s)+")
+    @Pattern(regexp = "([A-Za-zäöüßÄÖÜ.,?!=)(<>\"/&%$\\\\]|\\s)+")
     String description;
 
     @Min(0)
